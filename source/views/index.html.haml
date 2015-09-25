@@ -6,6 +6,9 @@
 #all-containers
   .container#about
     %h3 About Me
+    .hidden-text
+      %p
+      Hello, I'm Michael Wright. I'm a software developer with experience in mobile and web development. I am passionate about designing beautiful software to solve meaningful problems.
   .container#work
     %h3 Work
   .container#education
@@ -14,9 +17,23 @@
     %h3 Accomplishments
 
 = javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js'
+= javascript_include_tag "http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"
 
 :javascript
+  var aboutOpen = true;
+  $( "#about" ).click(function() {
+  console.log("clicked");
+  var animationStartingAttributes = {fontSize:"30px", yoyo:true, display:"block"};
+  var animationEndingAttributes = {opacity:"1.0"};
+  TweenMax.to('.hidden-text', 1, animationStartingAttributes);
+  TweenMax.to('.hidden-text', 1, animationEndingAttributes).delay(1.0);
+  });
+
+
   function onReady(){
+        var opa = 0;
+        var animationStartingAttributes = {opacity:opa, color:"#34F4F4"};
+        TweenMax.from('h2', 1, animationStartingAttributes).delay(0.5);
         console.log("Text JS");
         }
   $(document).ready(onReady);
