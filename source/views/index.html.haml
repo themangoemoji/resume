@@ -1,3 +1,4 @@
+
 #title
   %h1 Hello,
   %h2 I'm Michael Wright
@@ -11,3 +12,11 @@
     %h3 Education
   .container#accomplishments
     %h3 Accomplishments
+
+= javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js'
+
+:javascript
+  function onReady(){
+        console.log("Text JS");
+        }
+  $(document).ready(onReady);
