@@ -1,0 +1,28 @@
+#all-containers {
+	margin: 0 auto;
+	width: 1208px;
+}
+.container {
+	display: inline-flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: 600px;
+	color: $off-white;
+	text-align: center;
+}
+#about {
+	order: 1;
+	background-color: $dark-blue;
+}
+#work {
+	order: 1;
+	background-color: $light-blue;
+}
+#education {
+	order: 2;
+	background-color: $yellow;
+}
+#accomplishments {
+	order: 2;
+	background-color: $red;
+}
