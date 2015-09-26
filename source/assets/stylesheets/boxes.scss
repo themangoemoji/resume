@@ -5,8 +5,8 @@
 
 .container {
 	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
+	flex-direction: column;
+	flex-wrap: nowrap;
 	width: 500px;
 	color: $off-white;
 	text-align: center;
@@ -37,17 +37,15 @@
 
 /* Small screens */
 @media all and (max-width: 500px) {
-
 	#all-containers {
 		max-width: 100%;
 	}
-
   .container {
     /* On small screens, we are no longer using row direction but column */
+
     flex-direction: column;
     max-width: 100%;
   }
-
 }
 
 #about {
@@ -72,6 +70,12 @@
 }
 
 .hidden-text {
-	display:none;
-	opacity:0;
+	display:block;
+	padding-bottom: 1em;
+	padding-left: 2em;
+	padding-right: 2em;
+	padding-bottom: 2em;
+	font-family: $slabo;
+	text-align: left;
+	font-size: 0px;
 }

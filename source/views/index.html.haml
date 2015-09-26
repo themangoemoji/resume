@@ -11,29 +11,60 @@
       Hello, I'm Michael Wright. I'm a software developer with experience in mobile and web development. I am passionate about designing beautiful software to solve meaningful problems.
   .container#work
     %h3 Work
+    .hidden-text
+      %p
+      Hello, I'm Michael Wright. I'm a software developer with experience in mobile and web development. I am passionate about designing beautiful software to solve meaningful problems.
   .container#education
     %h3 Education
+    .hidden-text
+      %p
+      Hello, I'm Michael Wright. I'm a software developer with experience in mobile and web development. I am passionate about designing beautiful software to solve meaningful problems.
   .container#accomplishments
     %h3 Accomplishments
+    .hidden-text
+      %p
+      Hello, I'm Michael Wright. I'm a software developer with experience in mobile and web development. I am passionate about designing beautiful software to solve meaningful problems.
 
 = javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js'
 = javascript_include_tag "http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"
 
 :javascript
-  var aboutOpen = true;
-  $( "#about" ).click(function() {
-  console.log("clicked");
-  var animationStartingAttributes = {fontSize:"30px", yoyo:true, display:"block"};
-  var animationEndingAttributes = {opacity:"1.0"};
-  TweenMax.to('.hidden-text', 1, animationStartingAttributes);
-  TweenMax.to('.hidden-text', 1, animationEndingAttributes).delay(1.0);
+  // Create boolean values for the open-property of the boxes,
+  // Box #1 (about me) starts open
+  var boxValues = {"about":1, "work":0, "education":0, "accomplishments":0};
+  var boxOpenVals = [1, 0, 0, 0];
+  var lastOpened = 'about';
+  var startingTitleColor = "#00FFFF";
+  var closeBox = {opacity:0, fontSize:0};
+  var openBox = {opacity:1.0, fontSize:'1.6em'};
+
+  // Function to resize about-me box if it is closed
+  // Pass in the div so that we can ask for it's ID name
+  $( ".container" ).click(function(div) {
+    console.log("clicked");
+    var clickedID = div.target.id;
+    if (boxValues[clickedID] == 0)
+    {
+      TweenMax.to('#'+lastOpened + ' .hidden-text', 1, closeBox);
+      TweenMax.to('#'+clickedID + ' .hidden-text', 0.1, openBox);
+      boxValues[clickedID] = 1;
+      boxValues[lastOpened] = 0;
+      lastOpened = clickedID;
+    }
+      // Set the previously opened value to false, new one to true
+      // Make sure that we set this box to open and all others to closed
   });
 
-
   function onReady(){
+        // Set about to be initially opened
+        $("#about .hidden-text").css("font-size", '1.5em');
         var opa = 0;
-        var animationStartingAttributes = {opacity:opa, color:"#34F4F4"};
-        TweenMax.from('h2', 1, animationStartingAttributes).delay(0.5);
+        var animationStartingAttributes = {opacity:opa, color:startingTitleColor};
+        TweenMax.from('h2', 0.7, animationStartingAttributes).delay(0.7);
         console.log("Text JS");
-        }
+      }
+  function boxHit() {
+
+  }
+
   $(document).ready(onReady);
