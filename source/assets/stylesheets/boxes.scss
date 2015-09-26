@@ -23,6 +23,9 @@
 		padding-right: 1em;
 	}
 }
+.container:hover {
+	opacity: 0.85;
+}
 
 /* Medium screens */
 @media all and (max-width: 800px) {
