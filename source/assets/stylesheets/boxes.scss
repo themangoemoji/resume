@@ -6,7 +6,7 @@
 .container {
 	display: flex;
 	flex-direction: column;
-	flex-wrap: nowrap;
+	flex-wrap: wrap;
 	width: 500px;
 	color: $off-white;
 	text-align: center;
@@ -14,6 +14,7 @@
 	flex-grow: 1;
 
 	h3 {
+		display: block;
 		font-family: $category-title-font;
 		font-size: 2em;
 		padding-top: 0.3em;
@@ -67,15 +68,14 @@
 #accomplishments {
 	order: 2;
 	background-color: $red;
-	margin-bottom: 5em;
 }
 
 .hidden-text {
 	display:block;
 	padding-bottom: 1em;
-	padding-left: 2em;
+	padding-left: 3em;
 	padding-right: 2em;
-	padding-bottom: 3em;
+	margin-bottom: 3em;
 	font-family: 'Work Sans';
 	font-weight: 100;
 	text-align: left;

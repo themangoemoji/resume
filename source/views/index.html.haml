@@ -5,23 +5,24 @@
 
 #all-containers
   .container#about
-    %h3 About Me
-    .hidden-text
+    %h3#about About Me
+    #about.hidden-text
       %p
       Hello, I'm Michael Wright. I'm a software developer with experience in mobile and web development. I am passionate about designing beautiful software to solve meaningful problems.
   .container#work
-    %h3 Work
-    .hidden-text
+    %h3#work Work
+    #work.hidden-text
       %p
       Hello, I'm Michael Wright. I'm a software developer with experience in mobile and web development. I am passionate about designing beautiful software to solve meaningful problems.
+  #education
   .container#education
-    %h3 Education
-    .hidden-text
+    %h3#education Education
+    #education.hidden-text
       %p
       Hello, I'm Michael Wright. I'm a software developer with experience in mobile and web development. I am passionate about designing beautiful software to solve meaningful problems.
   .container#accomplishments
-    %h3 Accomplishments
-    .hidden-text
+    %h3#accomplishments Accomplishments
+    #accomplishments.hidden-text
       %p
       Hello, I'm Michael Wright. I'm a software developer with experience in mobile and web development. I am passionate about designing beautiful software to solve meaningful problems.
 
@@ -48,8 +49,8 @@
     var clickedID = div.target.id;
     if (boxValues[clickedID] == 0)
     {
-      TweenMax.to('#'+lastOpened + ' .hidden-text', 1, closeBox);
-      TweenMax.to('#'+clickedID + ' .hidden-text', 0.1, openBox);
+      TweenMax.to('#'+lastOpened + ' .hidden-text', 0.3, closeBox);
+      TweenMax.to('#'+clickedID + ' .hidden-text', 0.8, openBox);
       boxValues[clickedID] = 1;
       boxValues[lastOpened] = 0;
       lastOpened = clickedID;
