@@ -1,0 +1,83 @@
+#all-containers {
+	margin: 0 auto;
+	width: 500px;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	width: 500px;
+	color: $off-white;
+	text-align: center;
+	justify-content: center;
+	flex-grow: 1;
+
+	h3 {
+		display: block;
+		font-family: $category-title-font;
+		font-size: 2em;
+		padding-top: 0.3em;
+		padding-bottom: 0.3em;
+		padding-left: 1em;
+		padding-right: 1em;
+	}
+}
+
+/* Medium screens */
+@media all and (max-width: 800px) {
+	#all-containers {
+		max-width: 100%;
+	}
+  .container {
+    /* When on medium sized screens, we center it by evenly distributing empty space around items */
+    justify-content: space-around;
+    max-width: 100%;
+  }
+}
+
+/* Small screens */
+@media all and (max-width: 500px) {
+	#all-containers {
+		max-width: 100%;
+	}
+  .container {
+    /* On small screens, we are no longer using row direction but column */
+
+    flex-direction: column;
+    max-width: 100%;
+  }
+}
+
+#about {
+	order: 1;
+	background-color: $dark-blue;
+}
+
+#work {
+	order: 1;
+	background-color: $light-blue;
+}
+
+#education {
+	order: 2;
+	background-color: $yellow;
+	flex-grow: 2;
+}
+
+#accomplishments {
+	order: 2;
+	background-color: $red;
+}
+
+.hidden-text {
+	display:block;
+	padding-bottom: 1em;
+	padding-left: 3em;
+	padding-right: 2em;
+	margin-bottom: 3em;
+	font-family: 'Work Sans';
+	font-weight: 100;
+	text-align: left;
+	font-size: 0px;
+}
