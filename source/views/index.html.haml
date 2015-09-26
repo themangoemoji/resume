@@ -41,23 +41,25 @@
   var openBoxSize = {fontSize:'1.6em'};
   var openBoxOpacity = {opacity:1.0};
 
-
   // Function to resize about-me box if it is closed
   // Pass in the div so that we can ask for it's ID name
   $( ".container" ).click(function(div) {
     console.log("clicked");
     var clickedID = div.target.id;
+    $('html,body').animate({
+        scrollTop: $("#"+clickedID).offset().top},
+        'fast');
     if (boxValues[clickedID] == 0)
     {
       TweenMax.to('#'+lastOpened + ' .hidden-text', 0.3, closeBox);
-      TweenMax.to('#'+clickedID + ' .hidden-text', 0.8, openBoxSize);
-      TweenMax.to('#'+clickedID + ' .hidden-text', 0.8, openBoxOpacity).delay(0.6);
+      TweenMax.to('#'+clickedID + ' .hidden-text', 1.0, openBoxSize);
+      TweenMax.to('#'+clickedID + ' .hidden-text', 1.0, openBoxOpacity).delay(1.0);
+      // Set the previously opened value to false, new one to true
+      // Make sure that we set this box to open and all others to closed
       boxValues[clickedID] = 1;
       boxValues[lastOpened] = 0;
       lastOpened = clickedID;
     }
-      // Set the previously opened value to false, new one to true
-      // Make sure that we set this box to open and all others to closed
   });
 
 
