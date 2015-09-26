@@ -53,12 +53,12 @@
 }
 
 #about {
-	order: 1;
+	order: 2;
 	background-color: $dark-blue;
 }
 
 #work {
-	order: 1;
+	order: 2;
 	background-color: $light-blue;
 }
 
@@ -83,4 +83,5 @@
 	font-weight: 100;
 	text-align: left;
 	font-size: 0px;
+	opacity: 0;
 }

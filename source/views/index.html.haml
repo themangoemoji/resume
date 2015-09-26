@@ -38,19 +38,20 @@
   var startingTitleColor = "#00FFFF";
   var closeBox = {opacity:0, fontSize:0};
   var openBox = {opacity:1.0, fontSize:'1.6em'};
+  var openBoxSize = {fontSize:'1.6em'};
+  var openBoxOpacity = {opacity:1.0};
+
 
   // Function to resize about-me box if it is closed
   // Pass in the div so that we can ask for it's ID name
   $( ".container" ).click(function(div) {
-
-
-
     console.log("clicked");
     var clickedID = div.target.id;
     if (boxValues[clickedID] == 0)
     {
       TweenMax.to('#'+lastOpened + ' .hidden-text', 0.3, closeBox);
-      TweenMax.to('#'+clickedID + ' .hidden-text', 0.8, openBox);
+      TweenMax.to('#'+clickedID + ' .hidden-text', 0.8, openBoxSize);
+      TweenMax.to('#'+clickedID + ' .hidden-text', 0.8, openBoxOpacity).delay(0.6);
       boxValues[clickedID] = 1;
       boxValues[lastOpened] = 0;
       lastOpened = clickedID;
@@ -59,9 +60,11 @@
       // Make sure that we set this box to open and all others to closed
   });
 
+
   function onReady(){
         // Set about to be initially opened
         $("#about .hidden-text").css("font-size", '1.5em');
+        $("#about .hidden-text").css("opacity", '1.0');
         var opa = 0;
         var animationStartingAttributes = {opacity:opa, color:startingTitleColor};
         TweenMax.from('h2', 0.7, animationStartingAttributes).delay(0.7);
