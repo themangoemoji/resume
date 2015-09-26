@@ -1,15 +1,74 @@
+
 #title
   %h1 Hello,
   %h2 I'm Michael Wright
 
 #all-containers
   .container#about
-    %p About Me
+    %h3#about About Me
+    #about.hidden-text
+      %p
+      Hello, I'm Michael Wright. I'm a software developer with experience in mobile and web development. I am passionate about designing beautiful software to solve meaningful problems.
   .container#work
-    %p Work
+    %h3#work Work
+    #work.hidden-text
+      %p
+      Hello, I'm Michael Wright. I'm a software developer with experience in mobile and web development. I am passionate about designing beautiful software to solve meaningful problems.
+  #education
   .container#education
-    %p Education
+    %h3#education Education
+    #education.hidden-text
+      %p
+      Hello, I'm Michael Wright. I'm a software developer with experience in mobile and web development. I am passionate about designing beautiful software to solve meaningful problems.
   .container#accomplishments
-    %p Accomplishments
+    %h3#accomplishments Accomplishments
+    #accomplishments.hidden-text
+      %p
+      Hello, I'm Michael Wright. I'm a software developer with experience in mobile and web development. I am passionate about designing beautiful software to solve meaningful problems.
+
+= javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js'
+= javascript_include_tag "http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"
+
+:javascript
+  // Create boolean values for the open-property of the boxes,
+  // Box #1 (about me) starts open
+  var boxValues = {"about":1, "work":0, "education":0, "accomplishments":0};
+  var boxOpenVals = [1, 0, 0, 0];
+  var lastOpened = 'about';
+  var startingTitleColor = "#00FFFF";
+  var closeBox = {opacity:0, fontSize:0};
+  var openBox = {opacity:1.0, fontSize:'1.6em'};
+
+  // Function to resize about-me box if it is closed
+  // Pass in the div so that we can ask for it's ID name
+  $( ".container" ).click(function(div) {
 
 
+
+    console.log("clicked");
+    var clickedID = div.target.id;
+    if (boxValues[clickedID] == 0)
+    {
+      TweenMax.to('#'+lastOpened + ' .hidden-text', 0.3, closeBox);
+      TweenMax.to('#'+clickedID + ' .hidden-text', 0.8, openBox);
+      boxValues[clickedID] = 1;
+      boxValues[lastOpened] = 0;
+      lastOpened = clickedID;
+    }
+      // Set the previously opened value to false, new one to true
+      // Make sure that we set this box to open and all others to closed
+  });
+
+  function onReady(){
+        // Set about to be initially opened
+        $("#about .hidden-text").css("font-size", '1.5em');
+        var opa = 0;
+        var animationStartingAttributes = {opacity:opa, color:startingTitleColor};
+        TweenMax.from('h2', 0.7, animationStartingAttributes).delay(0.7);
+        console.log("Text JS");
+      }
+  function boxHit() {
+
+  }
+
+  $(document).ready(onReady);
