@@ -67,6 +67,7 @@
 #accomplishments {
 	order: 2;
 	background-color: $red;
+	margin-bottom: 5em;
 }
 
 .hidden-text {
@@ -74,8 +75,9 @@
 	padding-bottom: 1em;
 	padding-left: 2em;
 	padding-right: 2em;
-	padding-bottom: 2em;
-	font-family: $slabo;
+	padding-bottom: 3em;
+	font-family: 'Work Sans';
+	font-weight: 100;
 	text-align: left;
 	font-size: 0px;
 }
