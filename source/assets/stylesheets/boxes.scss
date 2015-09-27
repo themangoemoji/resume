@@ -18,13 +18,24 @@
 		font-family: $category-title-font;
 		font-size: 2em;
 		padding-top: 0.3em;
-		padding-bottom: 0.3em;
+		padding-bottom: 0.1em;
 		padding-left: 1em;
 		padding-right: 1em;
+		margin-top: 0;
+	}
+	img {
+		margin-top: 1em;
 	}
 }
+.icon {
+	margin-top: 1em;
+}
+
 .container:hover {
 	opacity: 0.85;
+}
+.container:last-of-type {
+	margin-bottom: 32em;
 }
 
 /* Medium screens */

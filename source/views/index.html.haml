@@ -2,26 +2,33 @@
 #title
   %h1 Hello,
   %h2 I'm Michael Wright
-
 #all-containers
   .container#about
     %h3#about About Me
+    .icon
+      <img id='about' src='assets/images/about.png'/>
     #about.hidden-text
       %p
       Hello, I'm Michael Wright. I'm a software developer with experience in mobile and web development. I am passionate about designing beautiful software to solve meaningful problems.
   .container#work
     %h3#work Work
+    .icon
+      <img id='work' src='assets/images/work.png'/>
     #work.hidden-text
       %p
       Hello, I'm Michael Wright. I'm a software developer with experience in mobile and web development. I am passionate about designing beautiful software to solve meaningful problems.
   #education
   .container#education
     %h3#education Education
+    .icon
+      <img id='education' src='assets/images/education.png'/>
     #education.hidden-text
       %p
       Hello, I'm Michael Wright. I'm a software developer with experience in mobile and web development. I am passionate about designing beautiful software to solve meaningful problems.
   .container#accomplishments
     %h3#accomplishments Accomplishments
+    .icon
+      <img id='accomplishments' src='assets/images/accomplishments.png'/>
     #accomplishments.hidden-text
       %p
       Hello, I'm Michael Wright. I'm a software developer with experience in mobile and web development. I am passionate about designing beautiful software to solve meaningful problems.
@@ -33,6 +40,8 @@
   // Create boolean values for the open-property of the boxes,
   // Box #1 (about me) starts open
   var boxValues = {"about":1, "work":0, "education":0, "accomplishments":0};
+  var boxIndecies = {"about":0, "work":1, "education":2, "accomplishments":3};
+  var boxCatalog = {0:"about", 1:"work", 2:"education", 3:"accomplishments"};
   var boxOpenVals = [1, 0, 0, 0];
   var lastOpened = 'about';
   var startingTitleColor = "#00FFFF";
@@ -40,25 +49,42 @@
   var openBox = {opacity:1.0, fontSize:'1.6em'};
   var openBoxSize = {fontSize:'1.6em'};
   var openBoxOpacity = {opacity:1.0};
+  // Store the var we clicked above
+  var clickedAbove;
+  var firstClick = false;
 
   // Function to resize about-me box if it is closed
   // Pass in the div so that we can ask for it's ID name
   $( ".container" ).click(function(div) {
-    console.log("clicked");
     var clickedID = div.target.id;
-    $('html,body').animate({
-        scrollTop: $("#"+clickedID).offset().top},
-        'fast');
+    clickedAbove = boxCatalog[boxIndecies[clickedID]-1];
+    console.log(boxCatalog[boxIndecies[clickedID]-1]);
+    // This bit of code will scroll to the title above the clicked target
     if (boxValues[clickedID] == 0)
     {
-      TweenMax.to('#'+lastOpened + ' .hidden-text', 0.3, closeBox);
-      TweenMax.to('#'+clickedID + ' .hidden-text', 1.0, openBoxSize);
-      TweenMax.to('#'+clickedID + ' .hidden-text', 1.0, openBoxOpacity).delay(1.0);
+      TweenMax.to('#'+lastOpened + ' .hidden-text', 0.2, closeBox);
+      TweenMax.to('#'+clickedID + ' .hidden-text', 0.8, openBoxSize).delay(0.5);
+      TweenMax.to('#'+clickedID + ' .hidden-text', 1.2, openBoxOpacity).delay(0.8);
       // Set the previously opened value to false, new one to true
       // Make sure that we set this box to open and all others to closed
       boxValues[clickedID] = 1;
       boxValues[lastOpened] = 0;
       lastOpened = clickedID;
+    }
+    if (clickedAbove != undefined) {
+      $('html,body').animate({
+        scrollTop: $('#'+clickedAbove + ' h3').offset().top},
+          'slow');
+    }
+    else {
+      $('html,body').animate({
+        scrollTop: $('h2').offset().top},
+          'slow')};
+    if (!firstClick)
+    {
+      TweenMax.to('#dissapear', 0.1, {opacity:0, visibility:'hidden'});
+      console.log('dissapear');
+      firstClick = true;
     }
   });
 

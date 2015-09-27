@@ -4,3 +4,7 @@
 @import "variables";
 @import "title";
 @import "boxes";
+
+html {
+	background-color: $background-white;
+}
