@@ -11,6 +11,11 @@ a {
   background-color: $highlight; /* WebKit/Blink Browsers */
 }
 
+strong {
+	color: $keyword;
+	font-weight: 400;
+}
+
 #work {
 	.row1 {
 		display: block;
