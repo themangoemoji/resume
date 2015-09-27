@@ -1,14 +1,41 @@
 #about {
-	a {
-		color: $yellow;
-		font-weight: 400;
-		text-decoration: none;
-	}
-}
-::selection {
-  background: #4F5D75; /* WebKit/Blink Browsers */
-}
-::-moz-selection {
-  background: #ffb7b7; /* Gecko Browsers */
 }
 
+a {
+	color: $yellow;
+	font-weight: 400;
+	text-decoration: none;
+}
+
+::selection {
+  background-color: $highlight; /* WebKit/Blink Browsers */
+}
+
+#work {
+	.row1 {
+		display: block;
+	}
+	.place {
+		margin-bottom: 0em;
+		font-size: 1.2em;
+	}
+	.date {
+		font-size: 0.5em;
+		margin-top: 0em;
+		margin-bottom: 1em;
+	}
+	.position {
+		margin-top: 0em;
+		margin-bottom: 0em;
+		font-size: 1em;
+		font-weight:200;
+	}
+	.description {
+		margin-top: 0em;
+		font-style: oblique;
+		font-size: 0.7em;
+	}
+	li {
+		font-size: 0.8em;
+	}
+}
