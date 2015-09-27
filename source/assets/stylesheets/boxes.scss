@@ -17,14 +17,25 @@
 		display: block;
 		font-family: $category-title-font;
 		font-size: 2em;
-		padding-top: 0.3em;
 		padding-bottom: 0.3em;
+		padding-top: 0.3em;
+		margin-top: 1.5em;
+		margin-bottom: 0em;
 		padding-left: 1em;
+		margin-left: 0.6em;
 		padding-right: 1em;
 	}
 }
+.icon {
+	margin-bottom: 2.5em;
+	text-align: center;
+}
+
 .container:hover {
 	opacity: 0.85;
+}
+.container:last-of-type {
+	margin-bottom: 32em;
 }
 
 /* Medium screens */
@@ -53,12 +64,12 @@
 }
 
 #about {
-	order: 1;
+	order: 2;
 	background-color: $dark-blue;
 }
 
 #work {
-	order: 1;
+	order: 2;
 	background-color: $light-blue;
 }
 
@@ -83,4 +94,5 @@
 	font-weight: 100;
 	text-align: left;
 	font-size: 0px;
+	opacity: 0;
 }

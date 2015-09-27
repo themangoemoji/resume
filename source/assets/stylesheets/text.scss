@@ -1,0 +1,14 @@
+#about {
+	a {
+		color: $yellow;
+		font-weight: 400;
+		text-decoration: none;
+	}
+}
+::selection {
+  background: #4F5D75; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #ffb7b7; /* Gecko Browsers */
+}
+

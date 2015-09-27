@@ -2,27 +2,36 @@
 #title
   %h1 Hello,
   %h2 I'm Michael Wright
-
 #all-containers
   .container#about
     %h3#about About Me
     #about.hidden-text
+      .icon#about
+        <img id='about' src='assets/images/about.png'/>
       %p
-      Hello, I'm Michael Wright. I'm a software developer with experience in mobile and web development. I am passionate about designing beautiful software to solve meaningful problems.
+      Hello, I'm Michael Wright. I'm a software developer with experience in mobile and web development. I am passionate about designing software to solve meaningful problems.
+      %p
+        I'm on <a href="http://www.github.com/wrightmhw">github</a>
   .container#work
     %h3#work Work
     #work.hidden-text
+      .icon#work
+        <img id='work' src='assets/images/work.png'/>
       %p
       Hello, I'm Michael Wright. I'm a software developer with experience in mobile and web development. I am passionate about designing beautiful software to solve meaningful problems.
   #education
   .container#education
     %h3#education Education
     #education.hidden-text
+      .icon#education
+        <img id='education' src='assets/images/education.png'/>
       %p
       Hello, I'm Michael Wright. I'm a software developer with experience in mobile and web development. I am passionate about designing beautiful software to solve meaningful problems.
   .container#accomplishments
     %h3#accomplishments Accomplishments
     #accomplishments.hidden-text
+      .icon#accomplishments
+        <img id='accomplishments' src='assets/images/accomplishments.png'/>
       %p
       Hello, I'm Michael Wright. I'm a software developer with experience in mobile and web development. I am passionate about designing beautiful software to solve meaningful problems.
 
@@ -33,35 +42,59 @@
   // Create boolean values for the open-property of the boxes,
   // Box #1 (about me) starts open
   var boxValues = {"about":1, "work":0, "education":0, "accomplishments":0};
+  var boxIndecies = {"about":0, "work":1, "education":2, "accomplishments":3};
+  var boxCatalog = {0:"about", 1:"work", 2:"education", 3:"accomplishments"};
   var boxOpenVals = [1, 0, 0, 0];
   var lastOpened = 'about';
   var startingTitleColor = "#00FFFF";
   var closeBox = {opacity:0, fontSize:0};
   var openBox = {opacity:1.0, fontSize:'1.6em'};
+  var openBoxSize = {fontSize:'1.6em'};
+  var openBoxOpacity = {opacity:1.0};
+  // Store the var we clicked above
+  var clickedAbove;
+  var firstClick = false;
 
   // Function to resize about-me box if it is closed
   // Pass in the div so that we can ask for it's ID name
   $( ".container" ).click(function(div) {
-
-
-
-    console.log("clicked");
     var clickedID = div.target.id;
+    clickedAbove = boxCatalog[boxIndecies[clickedID]-1];
+    console.log(boxCatalog[boxIndecies[clickedID]-1]);
+    // This bit of code will scroll to the title above the clicked target
     if (boxValues[clickedID] == 0)
     {
-      TweenMax.to('#'+lastOpened + ' .hidden-text', 0.3, closeBox);
-      TweenMax.to('#'+clickedID + ' .hidden-text', 0.8, openBox);
+      TweenMax.to('#'+lastOpened + ' .hidden-text', 0.2, closeBox);
+      TweenMax.to('#'+clickedID + ' .hidden-text', 0.8, openBoxSize).delay(0.5);
+      TweenMax.to('#'+clickedID + ' .hidden-text', 1.2, openBoxOpacity).delay(0.8);
+      // Set the previously opened value to false, new one to true
+      // Make sure that we set this box to open and all others to closed
       boxValues[clickedID] = 1;
       boxValues[lastOpened] = 0;
       lastOpened = clickedID;
     }
-      // Set the previously opened value to false, new one to true
-      // Make sure that we set this box to open and all others to closed
+    if (clickedAbove != undefined) {
+      $('html,body').animate({
+        scrollTop: $('#'+clickedAbove + ' h3').offset().top},
+          'slow');
+    }
+    else {
+      $('html,body').animate({
+        scrollTop: $('h2').offset().top},
+          'slow')};
+    if (!firstClick)
+    {
+      TweenMax.to('#dissapear', 0.1, {opacity:0, visibility:'hidden'});
+      console.log('dissapear');
+      firstClick = true;
+    }
   });
+
 
   function onReady(){
         // Set about to be initially opened
         $("#about .hidden-text").css("font-size", '1.5em');
+        $("#about .hidden-text").css("opacity", '1.0');
         var opa = 0;
         var animationStartingAttributes = {opacity:opa, color:startingTitleColor};
         TweenMax.from('h2', 0.7, animationStartingAttributes).delay(0.7);
