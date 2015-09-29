@@ -175,3 +175,15 @@ strong {
     max-width: 100%;
   }
 }
+.hidden-text {
+	display:block;
+	padding-bottom: 1em;
+	padding-left: 3em;
+	padding-right: 2em;
+	margin-bottom: 3em;
+	font-family: $sans;
+	font-weight: 100;
+	text-align: left;
+	font-size: 0px;
+	opacity: 0;
+}
