@@ -4,10 +4,17 @@ $red: #A8201A;
 $yellow: #EC9A29;
 $light-blue: #0F8B8D;
 $dark-blue: #143642;
+$maroon: #63212A;
 $background-white: #FDFDFF;
+$highlight: #6A0136;
+$keyword: #FF8C66;
 
 
 // Google fontsimports
+$sans: 'Roboto', sans-serif;
+$serif: 'Arvo', serif;
+$title: 'Comfortaa', serif;
+/*
 $bree: 'Bree Serif', serif;
 $comfortaa: 'Comfortaa', cursive;
 $patua: 'Patua One', cursive;
@@ -18,6 +25,7 @@ $sanchez: 'Sanchez', serif;
 //Fonts
 $title-font: $sanchez, serif;
 $category-title-font: $patua;
+*/
 
 //Spacing
 $gutter: 30px;
