@@ -62,9 +62,8 @@
 
 
   h3 {
-	  font-size: 2em;
+	  font-size: 1.5em;
   }
-
   p {
 	  font-size: 0.7em;
   }
@@ -72,7 +71,15 @@
 	  padding-right: 0.8em;
 	  padding-left: 1em;
 	  margin-bottom: 1em;
+	  #work, accomplishments, #education {
+	  h4 {
+		  font-size: 0.8em;
+	  }
+	  li {
+		  font-size: 0.4em;
+	  }
   }
+}
     flex-direction: column;
     max-width: 100%;
   }
