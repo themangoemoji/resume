@@ -19,11 +19,8 @@
           <div class='icon' id='about'>
             <img id='about' src='assets/images/about.png'/>
           </div>
+          <p>Hello, I'm Michael Wright. I'm a software developer with experience in mobile and web development. I am passionate about designing software to solve meaningful problems.</p>
           <p></p>
-          Hello, I'm Michael Wright. I'm a software developer with experience in mobile and web development. I am passionate about designing software to solve meaningful problems.
-          <p>
-            I'm on <a href="http://www.github.com/wrightmhw">github</a>
-          </p>
         </div>
       </div>
       <div class='container' id='work'>
@@ -33,8 +30,8 @@
             <img id='work' src='assets/images/work.png'/>
           </div>
           <h4 class='place row1'>Kohl's, <a href="http://www.kohls.com">kohls.com</a></h4>
-          <h4 class='position'>Programmer Analyst Intern</h4>
-          <h5 class='date row1'>June, 2015 — August, 2015</h5>
+          <h4 class='position'><em>Programmer Analyst Intern</em></h4>
+          <h5 class='date row1'>JUNE, 2015 — AUGUST, 2015</h5>
           <ul>
             <li>Worked with and learned <strong>MYSQL</strong> to create views and tables that highlighted database problems</li>
             <li>Developed an <strong>APEX</strong> (Oracle's Application Express) dashboard for Kohl's DBA's to diagnose database instance failures</li>
@@ -74,21 +71,40 @@
           Hello, I'm Michael Wright. I'm a software developer with experience in mobile and web development. I am passionate about designing beautiful software to solve meaningful problems.
         </div>
       </div>
+      <div class='container' id='contact'>
+        <h3 id='contact'>Let's Talk!</h3>
+        <div class='hidden-text' id='contact'>
+          <div class='icon' id='contact'>
+            <img id='contact-image' src='assets/images/contact.png'/>
+          </div>
+          <p></p>
+          I'd love to talk with you.
+          <h4>
+            email me: <a>wrigh517@msu.edu</a>
+          </h4>
+          <h4>
+            <a>(215)-431-1593</a>
+          </h4>
+          <h4>
+            And I'm also on <a href="http://www.github.com/wrightmhw">github</a>
+          </h4>
+        </div>
+      </div>
     </div>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" type="text/javascript"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js" type="text/javascript"></script>
     <script>
       // Create boolean values for the open-property of the boxes,
       // Box #1 (about me) starts open
-      var boxValues = {"about":1, "work":0, "education":0, "accomplishments":0};
-      var boxIndecies = {"about":0, "work":1, "education":2, "accomplishments":3};
-      var boxCatalog = {0:"about", 1:"work", 2:"education", 3:"accomplishments"};
-      var boxOpenVals = [1, 0, 0, 0];
+      var boxValues = {"about":1, "work":0, "education":0, "accomplishments":0, "contact":0};
+      var boxIndecies = {"about":0, "work":1, "education":2, "accomplishments":3, "contact":4};
+      var boxCatalog = {0:"about", 1:"work", 2:"education", 3:"accomplishments", 4:"contact"};
+      var boxOpenVals = [1, 0, 0, 0, 0];
       var lastOpened = 'about';
       var startingTitleColor = "#00FFFF";
       var closeBox = {opacity:0, fontSize:0};
-      var openBox = {opacity:1.0, fontSize:'1.6em'};
-      var openBoxSize = {fontSize:'1.6em'};
+      var openBox = {opacity:1.0, fontSize:'1.2em'};
+      var openBoxSize = {fontSize:'1.2em'};
       var openBoxOpacity = {opacity:1.0};
       // Store the var we clicked above
       var clickedAbove;
