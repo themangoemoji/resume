@@ -79,77 +79,84 @@ $category-title-font: $patua;
 
 /* line 30, /Users/mhw/michaelwright/source/assets/stylesheets/_boxes.scss */
 .icon {
-  margin-bottom: 2.5em;
+  margin-top: 2em;
+  margin-bottom: 3em;
   text-align: center; }
 
-/* line 35, /Users/mhw/michaelwright/source/assets/stylesheets/_boxes.scss */
+/* line 36, /Users/mhw/michaelwright/source/assets/stylesheets/_boxes.scss */
 .container:hover {
   opacity: 0.85; }
 
-/* line 38, /Users/mhw/michaelwright/source/assets/stylesheets/_boxes.scss */
+/* line 39, /Users/mhw/michaelwright/source/assets/stylesheets/_boxes.scss */
 .container:last-of-type {
   margin-bottom: 32em; }
 
 /* Medium screens */
 @media all and (max-width: 800px) {
-  /* line 44, /Users/mhw/michaelwright/source/assets/stylesheets/_boxes.scss */
+  /* line 45, /Users/mhw/michaelwright/source/assets/stylesheets/_boxes.scss */
   #all-containers {
     max-width: 100%; }
 
-  /* line 47, /Users/mhw/michaelwright/source/assets/stylesheets/_boxes.scss */
+  /* line 48, /Users/mhw/michaelwright/source/assets/stylesheets/_boxes.scss */
   .container {
     /* When on medium sized screens, we center it by evenly distributing empty space around items */
     justify-content: space-around;
     max-width: 100%; } }
 /* Small screens */
 @media all and (max-width: 500px) {
-  /* line 56, /Users/mhw/michaelwright/source/assets/stylesheets/_boxes.scss */
+  /* line 57, /Users/mhw/michaelwright/source/assets/stylesheets/_boxes.scss */
   #all-containers {
     max-width: 100%; }
 
-  /* line 59, /Users/mhw/michaelwright/source/assets/stylesheets/_boxes.scss */
+  /* line 60, /Users/mhw/michaelwright/source/assets/stylesheets/_boxes.scss */
   .container {
     /* On small screens, we are no longer using row direction but column */
     flex-direction: column;
     max-width: 100%; }
-    /* line 63, /Users/mhw/michaelwright/source/assets/stylesheets/_boxes.scss */
+    /* line 64, /Users/mhw/michaelwright/source/assets/stylesheets/_boxes.scss */
     .container h3 {
       font-size: 2em; }
-    /* line 67, /Users/mhw/michaelwright/source/assets/stylesheets/_boxes.scss */
+    /* line 68, /Users/mhw/michaelwright/source/assets/stylesheets/_boxes.scss */
     .container p {
-      font-size: 0.5em; }
-    /* line 70, /Users/mhw/michaelwright/source/assets/stylesheets/_boxes.scss */
+      font-size: 0.7em; }
+    /* line 71, /Users/mhw/michaelwright/source/assets/stylesheets/_boxes.scss */
     .container .hidden-text {
-      padding-right: 1em;
-      padding-left: 1em; } }
-/* line 79, /Users/mhw/michaelwright/source/assets/stylesheets/_boxes.scss */
+      padding-right: 0.8em;
+      padding-left: 1em;
+      margin-bottom: 1em; } }
+/* line 81, /Users/mhw/michaelwright/source/assets/stylesheets/_boxes.scss */
 #about {
   order: 2;
   background-color: #143642; }
 
-/* line 84, /Users/mhw/michaelwright/source/assets/stylesheets/_boxes.scss */
+/* line 86, /Users/mhw/michaelwright/source/assets/stylesheets/_boxes.scss */
 #work {
   order: 2;
   background-color: #0F8B8D; }
 
-/* line 89, /Users/mhw/michaelwright/source/assets/stylesheets/_boxes.scss */
+/* line 91, /Users/mhw/michaelwright/source/assets/stylesheets/_boxes.scss */
 #education {
   order: 2;
   background-color: #EC9A29;
   flex-grow: 2; }
 
-/* line 95, /Users/mhw/michaelwright/source/assets/stylesheets/_boxes.scss */
+/* line 97, /Users/mhw/michaelwright/source/assets/stylesheets/_boxes.scss */
 #accomplishments {
   order: 2;
   background-color: #A8201A; }
 
-/* line 100, /Users/mhw/michaelwright/source/assets/stylesheets/_boxes.scss */
+/* line 102, /Users/mhw/michaelwright/source/assets/stylesheets/_boxes.scss */
 #contact {
   order: 2;
   background-color: #63212A;
-  flex-grow: 2; }
+  flex-grow: 2;
+  text-align: center;
+  font-weight: 400; }
+  /* line 108, /Users/mhw/michaelwright/source/assets/stylesheets/_boxes.scss */
+  #contact a {
+    font-weight: 100; }
 
-/* line 106, /Users/mhw/michaelwright/source/assets/stylesheets/_boxes.scss */
+/* line 113, /Users/mhw/michaelwright/source/assets/stylesheets/_boxes.scss */
 .hidden-text {
   display: block;
   padding-bottom: 1em;
@@ -168,48 +175,125 @@ body {
 
 /* line 8, /Users/mhw/michaelwright/source/assets/stylesheets/_text.scss */
 a {
-  color: #EC9A29;
+  color: #63212A;
   font-weight: 300;
-  text-decoration: none; }
+  font-family: "Roboto Condensed", sans-serif;
+  font-style: italic;
+  text-decoration: underline;
+  font-size: 0.8em; }
 
-/* line 14, /Users/mhw/michaelwright/source/assets/stylesheets/_text.scss */
+/* line 17, /Users/mhw/michaelwright/source/assets/stylesheets/_text.scss */
+#contact a {
+  color: #EC9A29; }
+
+/* line 22, /Users/mhw/michaelwright/source/assets/stylesheets/_text.scss */
 ::selection {
   background-color: #6A0136;
   /* WebKit/Blink Browsers */ }
 
-/* line 18, /Users/mhw/michaelwright/source/assets/stylesheets/_text.scss */
+/* line 26, /Users/mhw/michaelwright/source/assets/stylesheets/_text.scss */
 strong {
   color: #FF8C66;
   font-weight: 300; }
 
-/* line 24, /Users/mhw/michaelwright/source/assets/stylesheets/_text.scss */
+/* line 32, /Users/mhw/michaelwright/source/assets/stylesheets/_text.scss */
 #work .row1 {
   display: block; }
-/* line 27, /Users/mhw/michaelwright/source/assets/stylesheets/_text.scss */
+/* line 35, /Users/mhw/michaelwright/source/assets/stylesheets/_text.scss */
 #work .place {
+  font-family: "Arvo", serif;
   font-weight: 400;
   margin-bottom: 0em;
   margin-top: 2em;
   font-size: 1.8em; }
-/* line 33, /Users/mhw/michaelwright/source/assets/stylesheets/_text.scss */
+/* line 42, /Users/mhw/michaelwright/source/assets/stylesheets/_text.scss */
 #work .date {
   font-size: 0.8em;
   margin-top: 0em;
   margin-bottom: 2em;
   font-weight: 100; }
-/* line 39, /Users/mhw/michaelwright/source/assets/stylesheets/_text.scss */
+/* line 48, /Users/mhw/michaelwright/source/assets/stylesheets/_text.scss */
 #work .position {
   margin-top: 0em;
   margin-bottom: 0em;
   font-size: 1em;
   font-weight: 200; }
-/* line 45, /Users/mhw/michaelwright/source/assets/stylesheets/_text.scss */
+/* line 54, /Users/mhw/michaelwright/source/assets/stylesheets/_text.scss */
 #work .description {
   margin-top: 0em;
   font-style: oblique;
   font-size: 1.1em; }
-/* line 50, /Users/mhw/michaelwright/source/assets/stylesheets/_text.scss */
+/* line 59, /Users/mhw/michaelwright/source/assets/stylesheets/_text.scss */
+#work ul {
+  margin-bottom: 1em; }
+/* line 62, /Users/mhw/michaelwright/source/assets/stylesheets/_text.scss */
 #work li {
+  font-size: 1.0em;
+  padding-bottom: 1.0em; }
+
+/* line 69, /Users/mhw/michaelwright/source/assets/stylesheets/_text.scss */
+#accomplishments a {
+  color: #EC9A29; }
+
+/* line 75, /Users/mhw/michaelwright/source/assets/stylesheets/_text.scss */
+#education .row1 {
+  display: block; }
+/* line 78, /Users/mhw/michaelwright/source/assets/stylesheets/_text.scss */
+#education .place {
+  font-weight: 400;
+  margin-bottom: 0em;
+  margin-top: 2em;
+  font-size: 1.8em; }
+/* line 84, /Users/mhw/michaelwright/source/assets/stylesheets/_text.scss */
+#education .date {
+  font-size: 0.8em;
+  margin-top: 0em;
+  margin-bottom: 2em;
+  font-weight: 100; }
+/* line 90, /Users/mhw/michaelwright/source/assets/stylesheets/_text.scss */
+#education .position {
+  margin-top: 0em;
+  margin-bottom: 0em;
+  font-size: 1em;
+  font-weight: 200; }
+/* line 96, /Users/mhw/michaelwright/source/assets/stylesheets/_text.scss */
+#education .description {
+  margin-top: 0em;
+  font-style: oblique;
+  font-size: 1.1em; }
+/* line 101, /Users/mhw/michaelwright/source/assets/stylesheets/_text.scss */
+#education li {
+  font-size: 1.0em;
+  padding-bottom: 1.0em; }
+
+/* line 107, /Users/mhw/michaelwright/source/assets/stylesheets/_text.scss */
+#accomplishments .row1 {
+  display: block; }
+/* line 110, /Users/mhw/michaelwright/source/assets/stylesheets/_text.scss */
+#accomplishments .place {
+  font-weight: 400;
+  margin-bottom: 0em;
+  margin-top: 2em;
+  font-size: 1.8em; }
+/* line 116, /Users/mhw/michaelwright/source/assets/stylesheets/_text.scss */
+#accomplishments .date {
+  font-size: 0.8em;
+  margin-top: 0em;
+  margin-bottom: 2em;
+  font-weight: 100; }
+/* line 122, /Users/mhw/michaelwright/source/assets/stylesheets/_text.scss */
+#accomplishments .position {
+  margin-top: 0em;
+  margin-bottom: 0em;
+  font-size: 1em;
+  font-weight: 200; }
+/* line 128, /Users/mhw/michaelwright/source/assets/stylesheets/_text.scss */
+#accomplishments .description {
+  margin-top: 0em;
+  font-style: oblique;
+  font-size: 1.1em; }
+/* line 133, /Users/mhw/michaelwright/source/assets/stylesheets/_text.scss */
+#accomplishments li {
   font-size: 1.0em;
   padding-bottom: 1.0em; }
 

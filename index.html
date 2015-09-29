@@ -57,8 +57,14 @@
           <div class='icon' id='education'>
             <img id='education' src='assets/images/education.png'/>
           </div>
-          <p></p>
-          Hello, I'm Michael Wright. I'm a software developer with experience in mobile and web development. I am passionate about designing beautiful software to solve meaningful problems.
+          <h4 class='place row1'>Michigan State University, <a href="http://www.msu.edu">msu.edu</a></h4>
+          <h4 class='position'><em>East Lansing, Michigan</em></h4>
+          <h5 class='date row1'>SEPTEMBER, 2012 — SEPTEMBER, 2015</h5>
+          <h5 class='date'>GPA: 3.3258/4.0000</h5>
+          <ul>
+            <li>Studying to complete Computer Science Bachelor's Degree in the College of Engineering</li>
+            <li>Biology cognate</li>
+          </ul>
         </div>
       </div>
       <div class='container' id='accomplishments'>
@@ -67,8 +73,19 @@
           <div class='icon' id='accomplishments'>
             <img id='accomplishments' src='assets/images/accomplishments.png'/>
           </div>
-          <p></p>
-          Hello, I'm Michael Wright. I'm a software developer with experience in mobile and web development. I am passionate about designing beautiful software to solve meaningful problems.
+          <h4 class='place row1'>The Spartan Dischords, <a href="http://www.thespartandischords.com">thespartandischords.com</a></h4>
+          <h4 class='position'><em>President</em></h4>
+          <h5 class='date row1'>MAY, 2015 — SEPTEMBER, 2015</h5>
+          <ul>
+            <li>Lead recordings, practices, and performances for MSU’s oldest men’s a cappella group at both MSU-sponsored events, as well as many events around the greater Lansing area</li>
+            <li>Worked with group members and alumni to guide the future direction of the group</li>
+          </ul>
+          <p>
+            <a href="http://www.thespartandischords.com">thespartandischords.com</a> - a Ruby on Rails project I designed and developed for The Spartan Dischords
+          </p>
+          <p>
+            <a href="http://www.github.com/wrightmhw/resume">github.com/wrightmhw/resume</a> - this, my resume site developed with jQuery, CSS, HAML, and Javascript
+          </p>
         </div>
       </div>
       <div class='container' id='contact'>
@@ -80,13 +97,13 @@
           <p></p>
           I'd love to talk with you.
           <h4>
-            email me: <a>wrigh517@msu.edu</a>
+            <a>wrigh517@msu.edu</a>
           </h4>
           <h4>
             <a>(215)-431-1593</a>
           </h4>
           <h4>
-            And I'm also on <a href="http://www.github.com/wrightmhw">github</a>
+            <a href="http://www.github.com/wrightmhw">github.com/wrightmhw</a>
           </h4>
         </div>
       </div>
@@ -120,8 +137,8 @@
         if (boxValues[clickedID] == 0)
         {
           TweenMax.to('#'+lastOpened + ' .hidden-text', 0.2, closeBox);
-          TweenMax.to('#'+clickedID + ' .hidden-text', 0.8, openBoxSize).delay(0.5);
-          TweenMax.to('#'+clickedID + ' .hidden-text', 1.2, openBoxOpacity).delay(0.8);
+          TweenMax.to('#'+clickedID + ' .hidden-text', 0.8, openBoxSize).delay(0.4);
+          TweenMax.to('#'+clickedID + ' .hidden-text', 1.2, openBoxOpacity).delay(0.9);
           // Set the previously opened value to false, new one to true
           // Make sure that we set this box to open and all others to closed
           boxValues[clickedID] = 1;
