@@ -1,10 +1,19 @@
 #about {
 }
 
+body {
+	line-height: 1.62;
+}
+
 a {
-	color: $yellow;
-	font-weight: 400;
-	text-decoration: none;
+	color: $maroon;
+	font-weight: 300;
+	text-decoration: underline;
+}
+#contact {
+	a {
+		color: $yellow;
+	}
 }
 
 ::selection {
@@ -13,21 +22,24 @@ a {
 
 strong {
 	color: $keyword;
-	font-weight: 400;
+	font-weight: 300;
 }
 
-#work {
+#work, {
 	.row1 {
 		display: block;
 	}
 	.place {
+		font-weight: 400;
 		margin-bottom: 0em;
-		font-size: 1.2em;
+		margin-top: 2em;
+		font-size: 1.8em;
 	}
 	.date {
-		font-size: 0.5em;
+		font-size: 0.8em;
 		margin-top: 0em;
-		margin-bottom: 1em;
+		margin-bottom: 2em;
+		font-weight: 100;
 	}
 	.position {
 		margin-top: 0em;
@@ -38,9 +50,49 @@ strong {
 	.description {
 		margin-top: 0em;
 		font-style: oblique;
-		font-size: 0.7em;
+		font-size: 1.1em;
 	}
 	li {
+		font-size: 1.0em;
+		padding-bottom: 1.0em;
+	}
+}
+
+#accomplishments {
+	a {
+		color: $yellow;
+	}
+}
+
+#education, {
+	.row1 {
+		display: block;
+	}
+	.place {
+		font-weight: 400;
+		margin-bottom: 0em;
+		margin-top: 2em;
+		font-size: 1.8em;
+	}
+	.date {
 		font-size: 0.8em;
+		margin-top: 0em;
+		margin-bottom: 2em;
+		font-weight: 100;
+	}
+	.position {
+		margin-top: 0em;
+		margin-bottom: 0em;
+		font-size: 1em;
+		font-weight:200;
+	}
+	.description {
+		margin-top: 0em;
+		font-style: oblique;
+		font-size: 1.1em;
+	}
+	li {
+		font-size: 1.0em;
+		padding-bottom: 1.0em;
 	}
 }
