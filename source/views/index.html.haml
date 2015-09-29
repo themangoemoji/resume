@@ -33,12 +33,6 @@
         %li Generated and aggregated data on algorithm and <strong>data structure effectiveness</strong>
         %li Use of <strong>GitHub version control</strong> to actively work with maintaining software repositories
         %li Writing <strong>unit tests</strong> and refactoring scripts and readability for software releases
-      %h4.place.row1 The Spartan Dischords, <a href="http://www.thespartandischords.com">thespartandischords.com</a>
-      %h4.position <em>President</em>
-      %h5.date.row1 MAY, 2015 — SEPTEMBER, 2015
-      %ul
-        %li Lead recordings, practices, and performances for MSU’s oldest men’s a cappella group at both MSU-sponsored events, as well as many events around the greater Lansing area
-        %li Worked with group members and alumni to guide the future direction of the group
   #education
   .container#education
     %h3#education Education
@@ -58,6 +52,12 @@
     #accomplishments.hidden-text
       .icon#accomplishments
         <img id='accomplishments' src='assets/images/accomplishments.png'/>
+      %h4.place.row1 The Spartan Dischords, <a href="http://www.thespartandischords.com">thespartandischords.com</a>
+      %h4.position <em>President</em>
+      %h5.date.row1 MAY, 2015 — SEPTEMBER, 2015
+      %ul
+        %li Lead recordings, practices, and performances for MSU’s oldest men’s a cappella group at both MSU-sponsored events, as well as many events around the greater Lansing area
+        %li Worked with group members and alumni to guide the future direction of the group
       %p
         <a href="http://www.thespartandischords.com">thespartandischords.com</a> - a Ruby on Rails project I designed and developed for The Spartan Dischords
       %p
@@ -107,8 +107,8 @@
     if (boxValues[clickedID] == 0)
     {
       TweenMax.to('#'+lastOpened + ' .hidden-text', 0.2, closeBox);
-      TweenMax.to('#'+clickedID + ' .hidden-text', 0.8, openBoxSize).delay(0.5);
-      TweenMax.to('#'+clickedID + ' .hidden-text', 1.2, openBoxOpacity).delay(0.8);
+      TweenMax.to('#'+clickedID + ' .hidden-text', 0.8, openBoxSize).delay(0.4);
+      TweenMax.to('#'+clickedID + ' .hidden-text', 1.2, openBoxOpacity).delay(0.9);
       // Set the previously opened value to false, new one to true
       // Make sure that we set this box to open and all others to closed
       boxValues[clickedID] = 1;
