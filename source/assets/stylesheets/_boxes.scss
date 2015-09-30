@@ -4,37 +4,19 @@
 }
 
 .container {
+
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
 	justify-content: center;
 	flex-grow: 1;
 	width: 700px;
-	color: $off-white;
-	text-align: center;
+	opacity: 0.85;
 
-	h3 {
-		display: block;
-		font-family: $title;
-		font-weight: 300;
-		font-size: 3em;
-		padding-bottom: 0.3em;
-		padding-top: 0.3em;
-		margin-top: 1.5em;
-		margin-bottom: 0em;
-		padding-left: 1em;
-		margin-left: 0.6em;
-		padding-right: 1em;
-	}
-}
-.icon {
-	margin-top: 2em;
-	margin-bottom: 3em;
-	text-align: center;
 }
 
 .container:hover {
-	opacity: 0.85;
+	opacity: 1;
 }
 .container:last-of-type {
 	margin-bottom: 32em;
@@ -45,44 +27,30 @@
 	#all-containers {
 		max-width: 100%;
 	}
-  .container {
-    /* When on medium sized screens, we center it by evenly distributing empty space around items */
-    justify-content: space-around;
-    max-width: 100%;
-  }
+
+	.container {
+		/* When on medium sized screens, we center it by evenly distributing empty space around items */
+		justify-content: space-around;
+		max-width: 100%;
+		flex-direction: column;
+	}
+
 }
 
 /* Small screens */
 @media all and (max-width: 500px) {
-	#all-containers {
+
+	.container {
+		flex-direction: column;
+		justify-content: space-around;
 		max-width: 100%;
+
+		#all-containers {
+			justify-content: space-around;
+			max-width: 100%;
+		}
+
 	}
-  .container {
-    /* On small screens, we are no longer using row direction but column */
-
-
-  h3 {
-	  font-size: 1.5em;
-  }
-  p {
-	  font-size: 0.7em;
-  }
-  .hidden-text {
-	  padding-right: 0.8em;
-	  padding-left: 1em;
-	  margin-bottom: 1em;
-	  #work, accomplishments, #education {
-	  h4 {
-		  font-size: 0.8em;
-	  }
-	  li {
-		  font-size: 0.4em;
-	  }
-  }
-}
-    flex-direction: column;
-    max-width: 100%;
-  }
 }
 
 #about {
@@ -110,22 +78,8 @@
 	order: 2;
 	background-color: $maroon;
 	flex-grow: 2;
-	text-align: center;
-	font-weight: 400;
-	a {
-	font-weight: 100;
-	}
 }
 
-.hidden-text {
-	display:block;
-	padding-bottom: 1em;
-	padding-left: 3em;
-	padding-right: 2em;
-	margin-bottom: 3em;
-	font-family: $sans;
-	font-weight: 100;
-	text-align: left;
-	font-size: 0px;
-	opacity: 0;
+.icon {
+	text-align: center;
 }

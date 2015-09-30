@@ -8,26 +8,28 @@
     #about.hidden-text
       .icon#about
         <img id='about' src='assets/images/about.png'/>
-      %p Hello, I'm Michael Wright. I'm a software developer with experience in mobile and web development. I am passionate about designing software to solve meaningful problems.
+      %p Hello, I'm Michael Wright. I'm a software developer with experience in mobile and web development. I am passionate about designing software to solve meaningful problems. In my free time I'm rock climbing, singing, or hacking away at some new project.
       %p
   .container#work
     %h3#work Work
     #work.hidden-text
       .icon#work
         <img id='work' src='assets/images/work.png'/>
-      %h4.place.row1 Kohl's, <a href="http://www.kohls.com">kohls.com</a>
+      %h4.place Kohl's
+      %h4.link <a href="http://www.kohls.com">kohls.com</a>
       %h4.position <em>Programmer Analyst Intern</em>
-      %h5.date.row1 JUNE, 2015 — AUGUST, 2015
+      %h5.date JUNE, 2015 — AUGUST, 2015
       %ul
         %li Worked with and learned <strong>MYSQL</strong> to create views and tables that highlighted database problems
         %li Developed an <strong>APEX</strong> (Oracle's Application Express) dashboard for Kohl's DBA's to diagnose database instance failures
         %li <strong>Won the intern shark-tank</strong> by developing and presenting our "Outfit Creator" prototype app, I designed and implemented the user interface using Invision
         %li Attended and contributed to IT-wide scrum's, using agile development methods
-      %h4.place GED-Lab, <a href="https://github.com/dib-lab/khmer">GED-Lab</a>
 
+      %h4.place GED-Lab
+      %h4.link <a href="https://github.com/dib-lab/khmer">GED-Lab</a>
       %p.description The former GED-Lab (now <a href="https://github.com/dib-lab">DIB-Lab</a>) at Michigan State University developed open source computational biology software tools.
       %h4.position Software Developer
-      %h5.date.row1 January, 2013 — May, 2014
+      %h5.date January, 2013 — May, 2014
       %ul
         %li Led <strong>memory optimization</strong> projects for complex genome-sequencing algorithms
         %li Generated and aggregated data on algorithm and <strong>data structure effectiveness</strong>
@@ -39,10 +41,11 @@
     #education.hidden-text
       .icon#education
         <img id='education' src='assets/images/education.png'/>
-      %h4.place.row1 Michigan State University, <a href="http://www.msu.edu">msu.edu</a>
+      %h4.place Michigan State University
+      %h4.link <a href="http://www.msu.edu">msu.edu</a>
       %h4.position <em>East Lansing, Michigan</em>
-      %h5.date.row1 SEPTEMBER, 2012 — SEPTEMBER, 2015
-      %h5.date GPA: 3.3258/4.0000
+      %h5.date SEPTEMBER, 2012 — SEPTEMBER, 2015
+      %h5#gpa GPA - 3.3258/4.0000
       %ul
         %li Studying to complete Computer Science Bachelor's Degree in the College of Engineering
         %li Biology cognate
@@ -52,10 +55,10 @@
     #accomplishments.hidden-text
       .icon#accomplishments
         <img id='accomplishments' src='assets/images/accomplishments.png'/>
-      %h4.place.row1 The Spartan Dischords,
+      %h4.place The Spartan Dischords,
       %h4.link <a href="http://www.thespartandischords.com">thespartandischords.com</a>
       %h4.position <em>President</em>
-      %h5.date.row1 MAY, 2015 — SEPTEMBER, 2015
+      %h5.date MAY, 2015 — SEPTEMBER, 2015
       %ul
         %li Lead recordings, practices, and performances for MSU’s oldest men’s a cappella group at both MSU-sponsored events, as well as many events around the greater Lansing area
         %li Worked with group members and alumni to guide the future direction of the group
@@ -68,13 +71,13 @@
     #contact.hidden-text
       .icon#contact
         <img id='contact-image' src='assets/images/contact.png'/>
-      %p
-      I'd love to talk with you.
-      %h4
-        <a>wrigh517@msu.edu</a>
-      %h4
+      %p Now that I've told you about myself, I'd love to get to know you.
+      %h4.contact
+        <a href="mailto:wrigh517@msu.edu">wrigh517@msu.edu</a>
+      %h4.contact
         <a>(215)-431-1593</a>
-      %h4
+        <a href="tel:2154311593">215.431.1593</a>
+      %h4.contact
         <a href="http://www.github.com/wrightmhw">github.com/wrightmhw</a>
 
 
@@ -91,8 +94,8 @@
   var lastOpened = 'about';
   var startingTitleColor = "#00FFFF";
   var closeBox = {opacity:0, fontSize:0};
-  var openBox = {opacity:1.0, fontSize:'1.2em'};
-  var openBoxSize = {fontSize:'1.2em'};
+  var openBox = {opacity:1.0, fontSize:'1.0em'};
+  var openBoxSize = {fontSize:'1.0em'};
   var openBoxOpacity = {opacity:1.0};
   // Store the var we clicked above
   var clickedAbove;
@@ -107,7 +110,7 @@
     // This bit of code will scroll to the title above the clicked target
     if (boxValues[clickedID] == 0)
     {
-      TweenMax.to('#'+lastOpened + ' .hidden-text', 0.2, closeBox);
+      TweenMax.to('#'+lastOpened + ' .hidden-text', 0.4, closeBox).delay(0.4);
       TweenMax.to('#'+clickedID + ' .hidden-text', 0.8, openBoxSize).delay(0.4);
       TweenMax.to('#'+clickedID + ' .hidden-text', 1.2, openBoxOpacity).delay(0.9);
       // Set the previously opened value to false, new one to true
@@ -118,8 +121,7 @@
     }
     if (clickedAbove != undefined) {
       $('html,body').animate({
-        scrollTop: $('#'+clickedAbove + ' h3').offset().top},
-          'slow');
+        scrollTop: $('#'+clickedAbove + ' h3').offset().top});
     }
     else {
       $('html,body').animate({
@@ -136,7 +138,7 @@
 
   function onReady(){
         // Set about to be initially opened
-        $("#about .hidden-text").css("font-size", '1.5em');
+        $("#about .hidden-text").css("font-size", '1.0em');
         $("#about .hidden-text").css("opacity", '1.0');
         var opa = 0;
         var animationStartingAttributes = {opacity:opa, color:startingTitleColor};
