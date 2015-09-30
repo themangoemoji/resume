@@ -61,23 +61,24 @@ $category-title-font: $patua;
   flex-wrap: wrap;
   justify-content: center;
   flex-grow: 1;
-  width: 700px; }
-
-/* line 17, /Users/mhw/michaelwright/source/assets/stylesheets/_boxes.scss */
-.container:hover {
+  width: 700px;
   opacity: 0.85; }
 
-/* line 20, /Users/mhw/michaelwright/source/assets/stylesheets/_boxes.scss */
+/* line 18, /Users/mhw/michaelwright/source/assets/stylesheets/_boxes.scss */
+.container:hover {
+  opacity: 1; }
+
+/* line 21, /Users/mhw/michaelwright/source/assets/stylesheets/_boxes.scss */
 .container:last-of-type {
   margin-bottom: 32em; }
 
 /* Medium screens */
 @media all and (max-width: 800px) {
-  /* line 26, /Users/mhw/michaelwright/source/assets/stylesheets/_boxes.scss */
+  /* line 27, /Users/mhw/michaelwright/source/assets/stylesheets/_boxes.scss */
   #all-containers {
     max-width: 100%; }
 
-  /* line 30, /Users/mhw/michaelwright/source/assets/stylesheets/_boxes.scss */
+  /* line 31, /Users/mhw/michaelwright/source/assets/stylesheets/_boxes.scss */
   .container {
     /* When on medium sized screens, we center it by evenly distributing empty space around items */
     justify-content: space-around;
@@ -85,43 +86,43 @@ $category-title-font: $patua;
     flex-direction: column; } }
 /* Small screens */
 @media all and (max-width: 500px) {
-  /* line 42, /Users/mhw/michaelwright/source/assets/stylesheets/_boxes.scss */
+  /* line 43, /Users/mhw/michaelwright/source/assets/stylesheets/_boxes.scss */
   .container {
     flex-direction: column;
     justify-content: space-around;
     max-width: 100%; }
-    /* line 47, /Users/mhw/michaelwright/source/assets/stylesheets/_boxes.scss */
+    /* line 48, /Users/mhw/michaelwright/source/assets/stylesheets/_boxes.scss */
     .container #all-containers {
       justify-content: space-around;
       max-width: 100%; } }
-/* line 55, /Users/mhw/michaelwright/source/assets/stylesheets/_boxes.scss */
+/* line 56, /Users/mhw/michaelwright/source/assets/stylesheets/_boxes.scss */
 #about {
   order: 2;
   background-color: #143642; }
 
-/* line 60, /Users/mhw/michaelwright/source/assets/stylesheets/_boxes.scss */
+/* line 61, /Users/mhw/michaelwright/source/assets/stylesheets/_boxes.scss */
 #work {
   order: 2;
   background-color: #0F8B8D; }
 
-/* line 65, /Users/mhw/michaelwright/source/assets/stylesheets/_boxes.scss */
+/* line 66, /Users/mhw/michaelwright/source/assets/stylesheets/_boxes.scss */
 #education {
   order: 2;
   background-color: #EC9A29;
   flex-grow: 2; }
 
-/* line 71, /Users/mhw/michaelwright/source/assets/stylesheets/_boxes.scss */
+/* line 72, /Users/mhw/michaelwright/source/assets/stylesheets/_boxes.scss */
 #accomplishments {
   order: 2;
   background-color: #A8201A; }
 
-/* line 76, /Users/mhw/michaelwright/source/assets/stylesheets/_boxes.scss */
+/* line 77, /Users/mhw/michaelwright/source/assets/stylesheets/_boxes.scss */
 #contact {
   order: 2;
   background-color: #63212A;
   flex-grow: 2; }
 
-/* line 82, /Users/mhw/michaelwright/source/assets/stylesheets/_boxes.scss */
+/* line 83, /Users/mhw/michaelwright/source/assets/stylesheets/_boxes.scss */
 .icon {
   text-align: center; }
 
