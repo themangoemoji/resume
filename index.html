@@ -143,6 +143,7 @@
           TweenMax.to('#'+lastOpened + ' .hidden-text', 0.4, closeBox).delay(0.4);
           TweenMax.to('#'+clickedID + ' .hidden-text', 0.8, openBoxSize).delay(0.4);
           TweenMax.to('#'+clickedID + ' .hidden-text', 1.2, openBoxOpacity).delay(0.9);
+          TweenMax.to('#'+clickedID + '.container', 1.2, openBoxOpacity).delay(0.9);
           // Set the previously opened value to false, new one to true
           // Make sure that we set this box to open and all others to closed
           boxValues[clickedID] = 1;
