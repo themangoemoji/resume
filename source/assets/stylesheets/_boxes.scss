@@ -4,28 +4,14 @@
 }
 
 .container {
+
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
 	justify-content: center;
 	flex-grow: 1;
 	width: 700px;
-	color: $off-white;
-	text-align: center;
 
-	h3 {
-		display: block;
-		font-family: $title;
-		font-weight: 300;
-		font-size: 3em;
-		padding-bottom: 0.3em;
-		padding-top: 0.3em;
-		margin-top: 1.5em;
-		margin-bottom: 0em;
-		padding-left: 1em;
-		margin-left: 0.6em;
-		padding-right: 1em;
-	}
 }
 
 .container:hover {
@@ -40,29 +26,30 @@
 	#all-containers {
 		max-width: 100%;
 	}
-  .container {
-    /* When on medium sized screens, we center it by evenly distributing empty space around items */
-    justify-content: space-around;
-    max-width: 100%;
-  }
+
+	.container {
+		/* When on medium sized screens, we center it by evenly distributing empty space around items */
+		justify-content: space-around;
+		max-width: 100%;
+		flex-direction: column;
+	}
+
 }
 
 /* Small screens */
 @media all and (max-width: 500px) {
-	#all-containers {
-		max-width: 100%;
-	}
-	.container {
-		/* On small screens, we are no longer using row direction but column */
 
-		.hidden-text {
-			padding-right: 0.8em;
-			padding-left: 1em;
-			margin-bottom: 1em;
+	.container {
+		flex-direction: column;
+		justify-content: space-around;
+		max-width: 100%;
+
+		#all-containers {
+			justify-content: space-around;
+			max-width: 100%;
 		}
+
 	}
-	flex-direction: column;
-	max-width: 100%;
 }
 
 #about {
@@ -92,3 +79,6 @@
 	flex-grow: 2;
 }
 
+.icon {
+	text-align: center;
+}
