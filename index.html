@@ -19,7 +19,7 @@
           <div class='icon' id='about'>
             <img id='about' src='assets/images/about.png'/>
           </div>
-          <p>Hello, I'm Michael Wright. I'm a software developer with experience in mobile and web development. I am passionate about designing software to solve meaningful problems.</p>
+          <p>Hello, I'm Michael Wright. I'm a software developer with experience in mobile and web development. I am passionate about designing software to solve meaningful problems. In my free time I'm rock climbing, singing, or hacking away at some new project.</p>
           <p></p>
         </div>
       </div>
@@ -29,19 +29,21 @@
           <div class='icon' id='work'>
             <img id='work' src='assets/images/work.png'/>
           </div>
-          <h4 class='place row1'>Kohl's, <a href="http://www.kohls.com">kohls.com</a></h4>
+          <h4 class='place'>Kohl's</h4>
+          <h4 class='link'><a href="http://www.kohls.com">kohls.com</a></h4>
           <h4 class='position'><em>Programmer Analyst Intern</em></h4>
-          <h5 class='date row1'>JUNE, 2015 — AUGUST, 2015</h5>
+          <h5 class='date'>JUNE, 2015 — AUGUST, 2015</h5>
           <ul>
             <li>Worked with and learned <strong>MYSQL</strong> to create views and tables that highlighted database problems</li>
             <li>Developed an <strong>APEX</strong> (Oracle's Application Express) dashboard for Kohl's DBA's to diagnose database instance failures</li>
             <li><strong>Won the intern shark-tank</strong> by developing and presenting our "Outfit Creator" prototype app, I designed and implemented the user interface using Invision</li>
             <li>Attended and contributed to IT-wide scrum's, using agile development methods</li>
           </ul>
-          <h4 class='place'>GED-Lab, <a href="https://github.com/dib-lab/khmer">GED-Lab</a></h4>
+          <h4 class='place'>GED-Lab</h4>
+          <h4 class='link'><a href="https://github.com/dib-lab/khmer">GED-Lab</a></h4>
           <p class='description'>The former GED-Lab (now <a href="https://github.com/dib-lab">DIB-Lab</a>) at Michigan State University developed open source computational biology software tools.</p>
           <h4 class='position'>Software Developer</h4>
-          <h5 class='date row1'>January, 2013 — May, 2014</h5>
+          <h5 class='date'>January, 2013 — May, 2014</h5>
           <ul>
             <li>Led <strong>memory optimization</strong> projects for complex genome-sequencing algorithms</li>
             <li>Generated and aggregated data on algorithm and <strong>data structure effectiveness</strong></li>
@@ -57,10 +59,11 @@
           <div class='icon' id='education'>
             <img id='education' src='assets/images/education.png'/>
           </div>
-          <h4 class='place row1'>Michigan State University, <a href="http://www.msu.edu">msu.edu</a></h4>
+          <h4 class='place'>Michigan State University</h4>
+          <h4 class='link'><a href="http://www.msu.edu">msu.edu</a></h4>
           <h4 class='position'><em>East Lansing, Michigan</em></h4>
-          <h5 class='date row1'>SEPTEMBER, 2012 — SEPTEMBER, 2015</h5>
-          <h5 class='date'>GPA: 3.3258/4.0000</h5>
+          <h5 class='date'>SEPTEMBER, 2012 — SEPTEMBER, 2015</h5>
+          <h5 id='gpa'>GPA - 3.3258/4.0000</h5>
           <ul>
             <li>Studying to complete Computer Science Bachelor's Degree in the College of Engineering</li>
             <li>Biology cognate</li>
@@ -73,10 +76,10 @@
           <div class='icon' id='accomplishments'>
             <img id='accomplishments' src='assets/images/accomplishments.png'/>
           </div>
-          <h4 class='place row1'>The Spartan Dischords,</h4>
+          <h4 class='place'>The Spartan Dischords,</h4>
           <h4 class='link'><a href="http://www.thespartandischords.com">thespartandischords.com</a></h4>
           <h4 class='position'><em>President</em></h4>
-          <h5 class='date row1'>MAY, 2015 — SEPTEMBER, 2015</h5>
+          <h5 class='date'>MAY, 2015 — SEPTEMBER, 2015</h5>
           <ul>
             <li>Lead recordings, practices, and performances for MSU’s oldest men’s a cappella group at both MSU-sponsored events, as well as many events around the greater Lansing area</li>
             <li>Worked with group members and alumni to guide the future direction of the group</li>
@@ -95,15 +98,15 @@
           <div class='icon' id='contact'>
             <img id='contact-image' src='assets/images/contact.png'/>
           </div>
-          <p></p>
-          I'd love to talk with you.
-          <h4>
-            <a>wrigh517@msu.edu</a>
+          <p>Now that I've told you about myself, I'd love to get to know you.</p>
+          <h4 class='contact'>
+            <a href="mailto:wrigh517@msu.edu">wrigh517@msu.edu</a>
           </h4>
-          <h4>
+          <h4 class='contact'>
             <a>(215)-431-1593</a>
+            <a href="tel:2154311593">215.431.1593</a>
           </h4>
-          <h4>
+          <h4 class='contact'>
             <a href="http://www.github.com/wrightmhw">github.com/wrightmhw</a>
           </h4>
         </div>
@@ -121,8 +124,8 @@
       var lastOpened = 'about';
       var startingTitleColor = "#00FFFF";
       var closeBox = {opacity:0, fontSize:0};
-      var openBox = {opacity:1.0, fontSize:'1.2em'};
-      var openBoxSize = {fontSize:'1.2em'};
+      var openBox = {opacity:1.0, fontSize:'1.0em'};
+      var openBoxSize = {fontSize:'1.0em'};
       var openBoxOpacity = {opacity:1.0};
       // Store the var we clicked above
       var clickedAbove;
@@ -166,7 +169,7 @@
       
       function onReady(){
             // Set about to be initially opened
-            $("#about .hidden-text").css("font-size", '1.5em');
+            $("#about .hidden-text").css("font-size", '1.0em');
             $("#about .hidden-text").css("opacity", '1.0');
             var opa = 0;
             var animationStartingAttributes = {opacity:opa, color:startingTitleColor};
