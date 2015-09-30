@@ -110,7 +110,7 @@
     // This bit of code will scroll to the title above the clicked target
     if (boxValues[clickedID] == 0)
     {
-      TweenMax.to('#'+lastOpened + ' .hidden-text', 0.2, closeBox);
+      TweenMax.to('#'+lastOpened + ' .hidden-text', 0.4, closeBox).delay(0.4);
       TweenMax.to('#'+clickedID + ' .hidden-text', 0.8, openBoxSize).delay(0.4);
       TweenMax.to('#'+clickedID + ' .hidden-text', 1.2, openBoxOpacity).delay(0.9);
       // Set the previously opened value to false, new one to true
@@ -121,8 +121,7 @@
     }
     if (clickedAbove != undefined) {
       $('html,body').animate({
-        scrollTop: $('#'+clickedAbove + ' h3').offset().top},
-          'slow');
+        scrollTop: $('#'+clickedAbove + ' h3').offset().top});
     }
     else {
       $('html,body').animate({
