@@ -31,7 +31,7 @@
           </div>
           <h4 class='place'>Kohl's</h4>
           <h4 class='link'><a href="http://www.kohls.com">kohls.com</a></h4>
-          <h4 class='position'><em>Programmer Analyst Intern</em></h4>
+          <h4 class='position'>Programmer Analyst Intern</h4>
           <h5 class='date'>JUNE, 2015 — AUGUST, 2015</h5>
           <ul>
             <li>Worked with and learned <strong>MYSQL</strong> to create views and tables that highlighted database problems</li>
@@ -61,7 +61,7 @@
           </div>
           <h4 class='place'>Michigan State University</h4>
           <h4 class='link'><a href="http://www.msu.edu">msu.edu</a></h4>
-          <h4 class='position'><em>East Lansing, Michigan</em></h4>
+          <h4 class='position'>East Lansing, Michigan</h4>
           <h5 class='date'>SEPTEMBER, 2012 — SEPTEMBER, 2015</h5>
           <h5 id='gpa'>GPA - 3.3258/4.0000</h5>
           <ul>
@@ -78,7 +78,7 @@
           </div>
           <h4 class='place'>The Spartan Dischords,</h4>
           <h4 class='link'><a href="http://www.thespartandischords.com">thespartandischords.com</a></h4>
-          <h4 class='position'><em>President</em></h4>
+          <h4 class='position'>President</h4>
           <h5 class='date'>MAY, 2015 — SEPTEMBER, 2015</h5>
           <ul>
             <li>Lead recordings, practices, and performances for MSU’s oldest men’s a cappella group at both MSU-sponsored events, as well as many events around the greater Lansing area</li>
@@ -126,6 +126,7 @@
       var openBox = {opacity:1.0, fontSize:'1.0em'};
       var openBoxSize = {fontSize:'1.0em'};
       var openBoxOpacity = {opacity:1.0};
+      var closeBoxOpacity = {opacity:0.85};
       // Store the var we clicked above
       var clickedAbove;
       var firstClick = false;
@@ -139,9 +140,10 @@
         // This bit of code will scroll to the title above the clicked target
         if (boxValues[clickedID] == 0)
         {
-          TweenMax.to('#'+lastOpened + ' .hidden-text', 0.4, closeBox).delay(0.4);
-          TweenMax.to('#'+clickedID + ' .hidden-text', 0.8, openBoxSize).delay(0.4);
-          TweenMax.to('#'+clickedID + ' .hidden-text', 1.2, openBoxOpacity).delay(0.9);
+          TweenMax.to('#'+lastOpened + '.hidden-text', 0.4, closeBox).delay(0.4);
+          TweenMax.to('#'+lastOpened + '.container', 0.4, closeBoxOpacity).delay(0.4);
+          TweenMax.to('#'+clickedID + '.hidden-text', 0.8, openBoxSize).delay(0.4);
+          TweenMax.to('#'+clickedID + '.hidden-text', 1.2, openBoxOpacity).delay(0.9);
           TweenMax.to('#'+clickedID + '.container', 1.2, openBoxOpacity).delay(0.5);
           // Set the previously opened value to false, new one to true
           // Make sure that we set this box to open and all others to closed
@@ -160,7 +162,6 @@
         if (!firstClick)
         {
           TweenMax.to('#dissapear', 0.1, {opacity:0, visibility:'hidden'});
-          console.log('dissapear');
           firstClick = true;
         }
       });
@@ -168,16 +169,13 @@
       
       function onReady(){
             // Set about to be initially opened
+            TweenMax.to('#about' + '.container', 1.2, openBoxOpacity).delay(0.5);
             $("#about .hidden-text").css("font-size", '1.0em');
             $("#about .hidden-text").css("opacity", '1.0');
             var opa = 0;
             var animationStartingAttributes = {opacity:opa, color:startingTitleColor};
             TweenMax.from('h2', 0.7, animationStartingAttributes).delay(0.7);
-            console.log("Text JS");
           }
-      function boxHit() {
-      
-      }
       
       $(document).ready(onReady);
     </script>
