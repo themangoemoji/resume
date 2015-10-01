@@ -6,13 +6,13 @@ body {
 
 	color: $white;
 	p {
-		font-family: $sans;
+		font-family: $serif;
 		font-weight: 100;
 	}
 
 	h3 {
 		display: block;
-		font-family: $title;
+		font-family: $sans;
 		font-weight: 300;
 		font-size: 3em;
 		padding-bottom: 0.3em;
@@ -20,7 +20,6 @@ body {
 		margin-top: 1.5em;
 		margin-bottom: 0em;
 		padding-left: 1em;
-		margin-left: 0.6em;
 		padding-right: 1em;
 		text-align: center;
 	}
@@ -28,19 +27,19 @@ body {
 	a {
 		color: $dark-blue;
 		font-weight: 500;
-		font-family: $condensed;
+		font-family: $serif;
 		font-style: italic;
 		text-decoration: underline;
 	}
 
 	li {
-		font-family: $sans;
+		font-family: $serif;
 		font-weight: 100;
 		margin-bottom: 0.5em;
 	}
 
 	#gpa {
-		font-family: $sans;
+		font-family: $serif;
 		font-weight: 300;
 	}
 
@@ -69,7 +68,7 @@ body {
 
 .place {
 	display: block;
-	font-family: $serif;
+	font-family: $sans;
 	font-size: 2.5em;
 	margin-bottom: 0em;
 	line-height: 1em;
@@ -78,16 +77,21 @@ body {
 .link {
 	font-size: 1.2em;
 	margin-top: 0em;
+	a {
+		font-family: $sans;
+		font-weight: 100;
+	}
 }
 
 .position {
 	margin-bottom: 0em;
+	font-size: 1.5em;
 	font-family: $serif;
 }
 
 .date {
 	margin-top: 0em;
-	font-family: $condensed;
+	font-family: $serif;
 	font-style: italic;
 }
 
