@@ -1,3 +1,3 @@
 #My Resume/CV
 ######Standing on Proteus, hosted by Middleman
-[github.io/wrightmhw/resume](http://github.io/wrightmhw/resume)
+[wrightmhw.github.io/resume](http://wrightmhw.github.io/resume)
